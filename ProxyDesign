@@ -1,0 +1,89 @@
+Mesh Design Patterns Presents:
+
+			_____________________________________________________________
+			|	____________________ ________  ____  ________.___.		|
+			|	\______   \______   \\_____  \ \   \/  /\__  |   |		|
+------------|	 |     ___/|       _/ /   |   \ \     /  /   |   |		|------------
+------------|	 |    |    |    |   \/    |    \/     \  \____   |		|------------
+			|	 |____|    |____|_  /\_______  /___/\  \ / ______|		|
+			|	                  \/         \/      \_/ \/       		|
+			-------------------------------------------------------------
+
+Proxy: "A class functioning as an interface to something else."
+
+Remote Proxy: An interface that provides local functionality that will trigger corressponding remote functionality (like an ATM).
+
+Virtual Proxy: An interface that represents a large complex object in its 'skeleton' form. Will use 'lazy loading' to retrieve and present parts of the large objects as specified by the user. (Local representation of large remote database. Think "Load More")
+
+Protection Proxy: Used to control access to sensitive data (Firewall/ Proxy Server)
+
+Example:
+******************************************************************************************
+******************************************************************************************
+
+// Class - BankAccount (no protection)
+
+#import "BankAccount.h"
+
+@class User;
+
+@implementation BankAccount
+
++ (void)getMoney:(NSNumber *)amount forUser:(User *)user {
+    NSLog(@"%@ got %@ $$$", user.userName, amount);
+}
+
+@end
+
+
+
+
+// Class - User
+
+#import "User.h"
+
+@interface User()
+
+@property (strong, nonatomic) NSString *userName;
+@property (nonatomic) BOOL isAuthorized;
+
+@end
+
+@implementation User
+
+- (NSString *)getName {
+    return self.userName;
+}
+
+- (BOOL)getIsAuthorized {
+    return self.isAuthorized;
+}
+
+@end
+
+
+
+
+// Class - ProtectionProxy
+
+#import "ProtectionProxy.h"
+#import "BankAccount.h"
+#import "User.h"
+
+@implementation ProtectionProxy
+
+- (void)checkAuthorization:(User *)user forAmount:(NSNumber *)amount {
+    if ([user getIsAuthorized]) {
+        [BankAccount getMoney:amount forUser:user];
+    } else {
+        NSLog(@"No money for you");
+    }
+}
+
+@end
+
+
+******************************************************************************************
+******************************************************************************************
+
+- The protection proxy could easily build out to restrict users on tons of different criteria (amount withdrawn, funds available, etc...). It makes sense to decouple this functionality from the actual "Account" object
