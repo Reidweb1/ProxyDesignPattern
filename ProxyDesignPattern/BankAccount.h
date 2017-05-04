@@ -10,4 +10,6 @@
 
 @interface BankAccount : NSObject
 
++ (void)getMoney:(NSNumber *)amount forUser:(NSObject *)user;
+
 @end

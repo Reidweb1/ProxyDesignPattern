@@ -10,4 +10,6 @@
 
 @interface User : NSObject
 
+- (BOOL)getIsAuthorized;
+
 @end

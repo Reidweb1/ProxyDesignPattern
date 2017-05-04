@@ -13,6 +13,9 @@
 		2876936B1EBB928C00BD85A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287693691EBB928C00BD85A4 /* Main.storyboard */; };
 		2876936D1EBB928C00BD85A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2876936C1EBB928C00BD85A4 /* Assets.xcassets */; };
 		287693701EBB928C00BD85A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876936E1EBB928C00BD85A4 /* LaunchScreen.storyboard */; };
+		287693791EBB92E700BD85A4 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 287693781EBB92E700BD85A4 /* BankAccount.m */; };
+		2876937C1EBB93CB00BD85A4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2876937B1EBB93CB00BD85A4 /* User.m */; };
+		2876937F1EBB94BC00BD85A4 /* ProtectionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2876937E1EBB94BC00BD85A4 /* ProtectionProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		2876936C1EBB928C00BD85A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2876936F1EBB928C00BD85A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		287693711EBB928C00BD85A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		287693771EBB92E700BD85A4 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
+		287693781EBB92E700BD85A4 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
+		2876937A1EBB93CB00BD85A4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2876937B1EBB93CB00BD85A4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2876937D1EBB94BC00BD85A4 /* ProtectionProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtectionProxy.h; sourceTree = "<group>"; };
+		2876937E1EBB94BC00BD85A4 /* ProtectionProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtectionProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				287693641EBB928B00BD85A4 /* AppDelegate.m */,
 				287693661EBB928B00BD85A4 /* ViewController.h */,
 				287693671EBB928B00BD85A4 /* ViewController.m */,
+				287693771EBB92E700BD85A4 /* BankAccount.h */,
+				287693781EBB92E700BD85A4 /* BankAccount.m */,
+				2876937A1EBB93CB00BD85A4 /* User.h */,
+				2876937B1EBB93CB00BD85A4 /* User.m */,
+				2876937D1EBB94BC00BD85A4 /* ProtectionProxy.h */,
+				2876937E1EBB94BC00BD85A4 /* ProtectionProxy.m */,
 				287693691EBB928C00BD85A4 /* Main.storyboard */,
 				2876936C1EBB928C00BD85A4 /* Assets.xcassets */,
 				2876936E1EBB928C00BD85A4 /* LaunchScreen.storyboard */,
@@ -151,9 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2876937C1EBB93CB00BD85A4 /* User.m in Sources */,
 				287693681EBB928B00BD85A4 /* ViewController.m in Sources */,
+				287693791EBB92E700BD85A4 /* BankAccount.m in Sources */,
 				287693651EBB928B00BD85A4 /* AppDelegate.m in Sources */,
 				287693621EBB928B00BD85A4 /* main.m in Sources */,
+				2876937F1EBB94BC00BD85A4 /* ProtectionProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

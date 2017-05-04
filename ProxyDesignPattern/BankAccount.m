@@ -10,4 +10,8 @@
 
 @implementation BankAccount
 
++ (void)getMoney:(NSNumber *)amount forUser:(NSObject *)user {
+    NSLog(@"%@ got %@ $$$", user, amount);
+}
+
 @end
